@@ -1,9 +1,10 @@
  /* --------- Duc PA ---------- */
-#cssmenu {
-    /* height: 400px; */
-}
-.iconMenu {
+ .iconMenu {
     width:  15px;
+}
+ #cssmenu {
+    position: relative;
+    z-index: 10;
 }
 .parent-menu {
     width: 220px;
@@ -32,10 +33,11 @@ a {
     margin: 0;
     padding: 8px 4px;
 }
-.child-0:hover {
-    border-right:1px solid #fff;
+.child-0:hover{
+    border-right:1px solid #ccc;
 }
 .child-1-list{
+    z-index: -1;
     display: none;
     height: 100%;
     min-width: 1000px;
@@ -44,15 +46,18 @@ a {
     left: 100%;
     padding-left: 8px;
     background-color: #272930;
-    animation: slide 1s, spin 1000ms;
+
 }
 .child-0:hover  .child-1-list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* display: none; */
+    
+    animation: slide 0.5s;
 }
-
+.child-0 > ul:not(.child-1-list){
+    animation: collapse 0.5s;
+}
 .child-1-item {
     font-size: 18px;
     padding: 8px 0;
@@ -88,5 +93,14 @@ a {
     }
     100%{
         left: 100%;
+    }
+}
+
+@keyframes collapse {
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
     }
 }
