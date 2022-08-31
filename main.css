@@ -6,29 +6,34 @@
     width:  15px;
 }
 .parent-menu {
-    margin: 0;
-    padding: 0;
-    width: 200px;
+    width: 220px;
     min-height: 500px;
+    padding: 0;
+    padding-left: 8px;
     height: max-content;
     position: relative;
     background-color: #272930;
 }
-.parent-menu li:hover {
+.parent-menu, li:hover > a {
     cursor: pointer;
+    color: rgb(255, 255, 255);
 }
 ul, li {
     list-style: none;
 }
 a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    width: 100%;
+    color: rgb(197, 197, 197);
 }
 
 .child-0{
     font-size: 20px;
     margin: 0;
     padding: 8px 4px;
+}
+.child-0:hover {
+    border-right:1px solid #fff;
 }
 .child-1-list{
     display: none;
@@ -39,11 +44,9 @@ a {
     left: 100%;
     padding-left: 8px;
     background-color: #272930;
+    animation: slide 1s, spin 1000ms;
 }
-.child-0:hover {
-    border-right: 2px solid #fff;
-}
-.child-0:hover > .child-1-list {
+.child-0:hover  .child-1-list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -76,4 +79,14 @@ a {
 
 .object--hide{
     display: none;
+}
+
+
+@keyframes slide {
+    0% {
+        left: 0%;
+    }
+    100%{
+        left: 100%;
+    }
 }
