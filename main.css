@@ -2,11 +2,55 @@
  .iconMenu {
     width:  15px;
 }
- #cssmenu {
+
+/* Nav bar */
+#navbar{
+    display: flex;
+    justify-content: start;
+    background-color: #a8420a;
+    height: 50px;
+    align-items: center;
+}
+.nav-item > h2 {
+    color: #fff;
+    margin: 0 8px;
+    line-height: 50px;
+}
+.nav-item:hover{
+    cursor: pointer;
+}
+
+/* nav menu */
+.nav-menu{
+    position: relative;
+}
+.nav-menu:hover #nav-menu-content{
+    display: block;
+}
+/* nav menu content */
+#nav-menu-content{
+    position: absolute;
+    display: none;
+    margin-top: 10px;
+    top: calc(100% );
+    left: 0;
+    animation: fade 0.3s ease-in-out;
+}
+ .menu-wrap {
     position: relative;
     z-index: 10;
 }
+#nav-menu-content::after{
+    content: "";
+    position: absolute;
+    border-width: 12px 10px;
+    border-style: solid;
+    border-color: transparent transparent #2e2e2f transparent;
+    top: -22px;
+    left: 20px;
+}
 .parent-menu {
+    margin: 0;
     width: 220px;
     min-height: 500px;
     padding: 0;
@@ -46,7 +90,6 @@ a {
     left: 100%;
     padding-left: 8px;
     background-color: #272930;
-
 }
 .child-0:hover  .child-1-list {
     display: flex;
@@ -82,10 +125,6 @@ a {
     padding: 4px 0;
 }
 
-.object--hide{
-    display: none;
-}
-
 
 @keyframes slide {
     0% {
@@ -96,11 +135,11 @@ a {
     }
 }
 
-@keyframes collapse {
+@keyframes fade {
     0%{
-        left: 100%;
+        opacity: 0;
     }
     100%{
-        left: 0%;
+        opacity: 1;
     }
 }
