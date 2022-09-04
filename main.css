@@ -40,10 +40,12 @@
     position: relative;
     z-index: 10;
 }
+
+
 #nav-menu-content::after{
     content: "";
     position: absolute;
-    border-width: 12px 10px;
+    border-width: 12px 20px;
     border-style: solid;
     border-color: transparent transparent #2e2e2f transparent;
     top: -22px;
