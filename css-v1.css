@@ -1,0 +1,99 @@
+ /* --------- Duc PA ---------- */
+ .iconMenu {
+    width:  10px;
+}
+ul, li {
+    padding: 0;
+    list-style: none;
+}
+
+/* nav menu */
+.menu-wrap{
+    font-family:  Helvetica ,sans-serif;
+}
+.nav-menu:hover #nav-menu-content{
+    display: block;
+}
+/* nav menu content */
+.menu-wrap {
+    font-size: 12px;
+    position: relative;
+    z-index: 10;
+}
+.parent-menu {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 8px;
+    height: max-content;
+    position: fixed;
+    background-color: #1A5597;
+}
+.parent-menu li:hover > a {
+    cursor: pointer;
+    background: #379ef8;
+}
+.parent-menu a {
+    display: block;
+    background-color: inherit;
+    font-size: 13px;
+    text-decoration: none;
+    width: 100%;
+    color: #fff;
+}
+
+.parent-menu > li > a{
+    text-transform: uppercase;
+    text-align: center;
+    width: 100px;
+    padding: 8px 0;
+    margin: 0;
+}
+.sub-0:hover{
+    border-bottom:1px solid #ccc;
+}
+.sub-0 > ul{
+    opacity: 1;
+    z-index: -1;
+    left: 0%;
+    display: none;
+    width: 788px;
+    height: 500px;
+    position: absolute;
+    padding: 12px;
+    background: linear-gradient(165deg, rgba(64,133,210,1) 0%, rgba(26,85,151,1) 45%, rgba(9,55,107,1) 100%);
+}
+.sub-0 a {
+    padding: 4px;
+}
+.sub-0:hover  ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    animation: fade ease 1s;
+}
+.sub-0 > ul > li {
+    margin: 8px 8px;
+}
+.sub-1 > ul {
+    margin: 4px 0;
+}
+.sub-2 > ul {
+    margin: 2px 0;
+}
+.sub-1 > ul > li {
+    padding: 2px 0;
+}
+.sub-1 > ul > li, .sub-2 > ul > li {
+    padding-left: 4px;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+}
