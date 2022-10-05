@@ -9,7 +9,7 @@ ul, li {
 
 /* nav menu */
 .menu-wrap{
-    font-family:  Helvetica ,sans-serif;
+    font-family:  Tahoma ,sans-serif;
 }
 .nav-menu:hover #nav-menu-content{
     display: block;
@@ -37,7 +37,6 @@ ul, li {
 .parent-menu a {
     display: block;
     background-color: inherit;
-    font-size: 13px;
     text-decoration: none;
     width: 100%;
     color: #fff;
@@ -65,7 +64,7 @@ ul, li {
     background: linear-gradient(165deg, rgba(64,133,210,1) 0%, rgba(26,85,151,1) 45%, rgba(9,55,107,1) 100%);
 }
 .sub-0 a {
-    padding: 4px;
+    padding: 6px;
 }
 .sub-0:hover  ul {
     display: flex;
@@ -74,10 +73,7 @@ ul, li {
     animation: fade ease 1s;
 }
 .sub-0 > ul > li {
-    margin: 8px 8px;
-}
-.sub-1 > ul {
-    margin: 4px 0;
+    margin: 6px 8px;
 }
 .sub-2 > ul {
     margin: 2px 0;
